@@ -30,10 +30,13 @@ import { MatButtonModule } from '@angular/material/button';
 })
 
 export class DialogAddPlayerComponent {
+  [x: string]: any;
   name: string= '';
 data: any;
 
-  onNoClick(){
+constructor(public dialogRef: MatDialogRef<DialogAddPlayerComponent>) {}
 
+  onNoClick(){
+    this.dialogRef.close();
   }
 }
